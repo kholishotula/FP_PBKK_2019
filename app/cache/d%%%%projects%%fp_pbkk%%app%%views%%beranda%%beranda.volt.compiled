@@ -51,6 +51,9 @@
             <li class="nav-item">
                 <a href="<?= $this->url->get('donasi') ?>" class="nav-link">Donasi</a>
             </li>
+            <li>
+                <a href="<?= $this->url->get('masuk') ?>" class="btn btn-success text-black">Masuk</a>
+            </li>
         </ul>
     </div>
     <!-- END Right Section -->

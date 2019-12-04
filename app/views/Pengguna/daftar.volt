@@ -62,9 +62,6 @@
                             <p>Terima kasih telah mendaftar :).</p>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <a href="{{url('beranda')}}" class="btn btn-alt-secondary" data-dismiss="modal">Kembali</a>
-                    </div>
                 </div>
             </div>
         </div>
