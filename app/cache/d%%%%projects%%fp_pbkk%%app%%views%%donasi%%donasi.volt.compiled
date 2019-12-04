@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="<?= $this->url->get('css/bootstrap.min.css') ?>" rel="stylesheet">
+<link href="<?= $this->url->get('css/fontawesome.min.css') ?>" rel="stylesheet">
+<link id="css-theme" href="<?= $this->url->get('css/pulse.min.css') ?>" rel="stylesheet">
+<link id="css-main" href="<?= $this->url->get('css/codebase.min.css') ?>" rel="stylesheet">
+<!-- <link href="<?= $this->url->get('css/style.css') ?>" rel="stylesheet">
+<link href="<?= $this->url->get('css/style1.css') ?>" rel="stylesheet"> -->
+<link rel="shortcut icon" href="<?= $this->url->get('assets/favicon.ico') ?>" type="image/x-icon">
+<script type="text/javascript" src="<?= $this->url->get('js/jquery-3.3.1.min.js') ?>"></script>
+<script type="text/javascript" src="<?= $this->url->get('js/script.js') ?>"></script>
+<script type="text/javascript" src="<?= $this->url->get('js/bootstrap.bundle.min.js') ?>"></script>
+	<title>YYPKF - Donasi</title>
+</head>
+<body>
+	<header id="page-header">
+<!-- Header Content -->
+<div class="content-header">
+    <!-- Left Section -->
+    <div class="content-header-section">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a href="<?= $this->url->get('beranda') ?>" class="nav-link active">
+                <i class="fa fa-fw fa-home mr-5"></i>Beranda
+                </a>
+            </li>
+            <li class="nav-item">
+                <img src="img/logo.png" class="img-responsive" style="width: 50%; height: 80%">
+            </li>
+        </ul>
+    </div>
+    <!-- END Left Section -->
+
+    <!-- Right Section -->
+    <div class="content-header-section">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a href="<?= $this->url->get('profil') ?>" class="nav-link">Profil</a>
+            </li>
+            <li class="nav-item">
+                <a href="<?= $this->url->get('anak') ?>" class="nav-link">Data Anak</a>
+            </li>
+            <li class="nav-item">
+                <a href="<?= $this->url->get('kegiatan') ?>" class="nav-link">Berita</a>
+            </li>
+            <li class="nav-item">
+                <a href="<?= $this->url->get('kontak') ?>" class="nav-link">Kontak</a>
+            </li>
+            <li class="nav-item">
+                <a href="<?= $this->url->get('donasi') ?>" class="nav-link">Donasi</a>
+            </li>
+        </ul>
+    </div>
+    <!-- END Right Section -->
+</div>
+<!-- END Header Content -->
+</header>
+
+	
+<?php $tahun = time(); ?>
+        <div id="page-container" class="sidebar-inverse side-scroll page-header-fixed main-content-boxed">
+            <main id="main-container">
+                <div class="content">
+                    <center><h2 class="content-heading">MEDIA DONASI</h2></center>
+                    <div class="row">
+                        <div class="col-8">
+                            <h3 class="content-heading">Pertama</h3>
+                            <p class="block-content nice-copy">Dengan mentransfer ke rekening Bank di nomer rekening : <br>
+                            <strong>MANDIRI: 140-00-1596894-5 A/N. YAYASAN KUN FAYAKUN</strong> <br>
+                            (mohon untuk mencantumkan nama bila berkenan)<br>
+                            Kemudian silahkan login dan isi formulir konfirmasi <strong><a href="<?= $this->url->get('konfirmasi') ?>">disini</a></strong></p>
+                            <h3 class="content-heading">Kedua</h3>
+                            <p class="block-content nice-copy">Dengan menyerahkan langsung kepada baik berupa uang atau barang ke 
+                            alamat : <strong>Jl.Raya Pandugo Timur No. 7 - 8 Rungkut - Surabaya. Jawa Timur</strong></p>
+                            <h3 class="content-heading">Ketiga</h3>
+                            <p class="block-content nice-copy">Bagi calon donatur yng masih dalam lingkup surabaya, kami siap untuk mengambil ke 
+                            tempat / lokasi yang sekiranya masih bisa kami jangkau, mohon untuk menginformasikan alamat dan nomer telpon melalui 
+                            email kami : <strong><a href="mailto:donasi@yayasankunfayakun.com">donasi@yayasankunfayakun.com</a></strong></p>
+                        </div>
+                        <div class="col-4">
+                            <img src="<?= $this->url->get('img/donate.jpg') ?>">
+                        </div>
+                    </div>
+                    <div>
+                        <center><h2 class="content-heading">DATA DONASI</h2></center>
+                        <p>Alhamdulillah, telah terkumpul dana sebesar Rp pada tahun <?= date('Y', $tahun) ?> <br>
+                        <a href="<?= $this->url->get('data-donasi') ?>">Klik disini untuk mengetahui data donasi Yayasan Kun Fayakun</p></a>
+                    </div>
+                    <br>
+                    <blockquote class="blockquote text-center bg-info text-black">
+                        <p class="mb-0">Semoga apa yang akan Bapak / Ibu sumbangkan kepada yayasan kami akan senantiasa<br>
+                        di ridhoi oleh allah SWT, akan membawa barokah bagi keluarga dan semua umat.  Semoga akan dilipat gandakan pahala dan<br>
+                        rezekinya dari sumber yang tidak disangka sangka datangnya…</p>
+                        <footer class="blockquote-footer text-black">AAAMIIN.</footer>
+                    </blockquote>
+                </div>
+            </main>
+        </div>
+
+	<br>
+	<br>
+	<div class="menuFooter clearfix">
+		<div class="container">
+			<div class="row clearfix">
+				<div class="col">
+					<h5>YAYASAN</h5>
+					<ul class="menuLink clearfix">
+						<li>
+							<a href="<?= $this->url->get('profil') ?>" title="PROFIL"><span>PROFIL</span></a>
+						</li>
+					</ul>
+				</div>
+				<div class="col borderLeft clearfix">
+					<h5>DONATUR</h5>
+					<ul class="menuLink clearfix">
+						<li>
+							<a href="<?= $this->url->get('donasi') ?>" title="PANDUAN DONATUR"><span>PANDUAN DONATUR</span></a>
+						</li>
+						<li>
+							<a href="<?= $this->url->get('donasi') ?>" title="CARA DONASI"><span>CARA DONASI</span></a>
+						</li>
+					</ul>
+				</div> 
+				<div class="col borderLeft clearfix">
+					<div class="footer-address"> 
+						<h5>KONTAK KAMI :</h5>
+						<address>
+							<i class="fa fa-map-marker"></i>
+							Jl.Raya Pandugo Timur No. 7-8 Rungkut - Surabaya 
+						</address> 
+						<h5><i class="fa fa-phone"></i> 031 8720331</h5>
+						<h5><i class="fa fa-mobile"></i> 085102913999</h5>
+					</div>
+				</div> 
+			</div> 
+		</div>
+	</div>
+	<br>
+	<div class="bg-info clearfix"> 
+		<div class="row"> 
+			<p>© 2019 PBKK - Crafted with <i class="fa fa-heart text-pulse"></i> by Maya</p>
+		</div> 
+	</div>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="<?= $this->url->get('css/bootstrap.min.css') ?>" rel="stylesheet">
+<link href="<?= $this->url->get('css/fontawesome.min.css') ?>" rel="stylesheet">
+<link id="css-theme" href="<?= $this->url->get('css/pulse.min.css') ?>" rel="stylesheet">
+<link id="css-main" href="<?= $this->url->get('css/codebase.min.css') ?>" rel="stylesheet">
+<!-- <link href="<?= $this->url->get('css/style.css') ?>" rel="stylesheet">
+<link href="<?= $this->url->get('css/style1.css') ?>" rel="stylesheet"> -->
+<link rel="shortcut icon" href="<?= $this->url->get('assets/favicon.ico') ?>" type="image/x-icon">
+<script type="text/javascript" src="<?= $this->url->get('js/jquery-3.3.1.min.js') ?>"></script>
+<script type="text/javascript" src="<?= $this->url->get('js/script.js') ?>"></script>
+<script type="text/javascript" src="<?= $this->url->get('js/bootstrap.bundle.min.js') ?>"></script>
+	<title>YYPKF - Daftar</title>
+</head>
+<body>
+	<header id="page-header">
+<!-- Header Content -->
+<div class="content-header">
+    <!-- Left Section -->
+    <div class="content-header-section">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a href="<?= $this->url->get('beranda') ?>" class="nav-link active">
+                <i class="fa fa-fw fa-home mr-5"></i>Beranda
+                </a>
+            </li>
+            <li class="nav-item">
+                <img src="img/logo.png" class="img-responsive" style="width: 50%; height: 80%">
+            </li>
+        </ul>
+    </div>
+    <!-- END Left Section -->
+
+    <!-- Right Section -->
+    <div class="content-header-section">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a href="<?= $this->url->get('profil') ?>" class="nav-link">Profil</a>
+            </li>
+            <li class="nav-item">
+                <a href="<?= $this->url->get('anak') ?>" class="nav-link">Data Anak</a>
+            </li>
+            <li class="nav-item">
+                <a href="<?= $this->url->get('kegiatan') ?>" class="nav-link">Berita</a>
+            </li>
+            <li class="nav-item">
+                <a href="<?= $this->url->get('kontak') ?>" class="nav-link">Kontak</a>
+            </li>
+            <li class="nav-item">
+                <a href="<?= $this->url->get('donasi') ?>" class="nav-link">Donasi</a>
+            </li>
+            <li>
+                <a href="<?= $this->url->get('masuk') ?>" class="btn btn-success text-black">Masuk</a>
+            </li>
+        </ul>
+    </div>
+    <!-- END Right Section -->
+</div>
+<!-- END Header Content -->
+</header>
+
+	
+        <div id="page-container" class="sidebar-inverse side-scroll page-header-fixed main-content-boxed">
+            <main id="main-container">
+                <div class="content">
+                    <center><h2 class="content-heading">PENDAFTARAN AKUN</h2></center>
+                    <div class="row">
+                        <div class="col-6">
+                            <form action="<?= $this->url->get('daftar') ?>" method="post">
+                                <div class="form-group">
+                                    <div class="form-material">
+                                        <input type="text" class="form-control" name="username" placeholder="username">
+                                        <label>Username</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-material">
+                                        <input type="email" class="form-control" name="email" placeholder="contoh@xxx.com">
+                                        <label>Email</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-material">
+                                        <input type="password" class="form-control" name="pw">
+                                        <label>Password</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-material">
+                                        <input type="password" class="form-control" name="pw2">
+                                        <label>Konfirmasi Password</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-success text-black" data-toggle="modal" data-target="#modal-fadein">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-6">
+                            <img src="<?= $this->url->get('img/zakat.jpg') ?>">
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="modal fade" id="modal-fadein" tabindex="-1" role="dialog" aria-labelledby="modal-fadein" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="block block-themed block-transparent mb-0">
+                        <div class="block-header bg-success">
+                            <h3 class="block-title">Terima kasih</h3>
+                            <div class="block-options">
+                                <button type="button" class="btn-block-option" data-dismiss="modal" aria-label="Close">
+                                    <i class="si si-close"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="block-content">
+                            <p>Terima kasih telah mendaftar :).</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="<?= $this->url->get('beranda') ?>" class="btn btn-alt-secondary" data-dismiss="modal">Kembali</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	<br>
+	<br>
+	<div class="menuFooter clearfix">
+		<div class="container">
+			<div class="row clearfix">
+				<div class="col">
+					<h5>YAYASAN</h5>
+					<ul class="menuLink clearfix">
+						<li>
+							<a href="<?= $this->url->get('profil') ?>" title="PROFIL"><span>PROFIL</span></a>
+						</li>
+					</ul>
+				</div>
+				<div class="col borderLeft clearfix">
+					<h5>DONATUR</h5>
+					<ul class="menuLink clearfix">
+						<li>
+							<a href="<?= $this->url->get('donasi') ?>" title="PANDUAN DONATUR"><span>PANDUAN DONATUR</span></a>
+						</li>
+						<li>
+							<a href="<?= $this->url->get('donasi') ?>" title="CARA DONASI"><span>CARA DONASI</span></a>
+						</li>
+					</ul>
+				</div> 
+				<div class="col borderLeft clearfix">
+					<div class="footer-address"> 
+						<h5>KONTAK KAMI :</h5>
+						<address>
+							<i class="fa fa-map-marker"></i>
+							Jl.Raya Pandugo Timur No. 7-8 Rungkut - Surabaya 
+						</address> 
+						<h5><i class="fa fa-phone"></i> 031 8720331</h5>
+						<h5><i class="fa fa-mobile"></i> 085102913999</h5>
+					</div>
+				</div> 
+			</div> 
+		</div>
+	</div>
+	<br>
+	<div class="bg-info clearfix"> 
+		<div class="row"> 
+			<p>© 2019 PBKK - Crafted with <i class="fa fa-heart text-pulse"></i> by Maya</p>
+		</div> 
+	</div>
+</body>
+</html>

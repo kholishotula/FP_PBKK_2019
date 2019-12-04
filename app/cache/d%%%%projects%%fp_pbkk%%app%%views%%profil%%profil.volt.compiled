@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="<?= $this->url->get('css/bootstrap.min.css') ?>" rel="stylesheet">
+<link href="<?= $this->url->get('css/fontawesome.min.css') ?>" rel="stylesheet">
+<link id="css-theme" href="<?= $this->url->get('css/pulse.min.css') ?>" rel="stylesheet">
+<link id="css-main" href="<?= $this->url->get('css/codebase.min.css') ?>" rel="stylesheet">
+<!-- <link href="<?= $this->url->get('css/style.css') ?>" rel="stylesheet">
+<link href="<?= $this->url->get('css/style1.css') ?>" rel="stylesheet"> -->
+<link rel="shortcut icon" href="<?= $this->url->get('assets/favicon.ico') ?>" type="image/x-icon">
+<script type="text/javascript" src="<?= $this->url->get('js/jquery-3.3.1.min.js') ?>"></script>
+<script type="text/javascript" src="<?= $this->url->get('js/script.js') ?>"></script>
+<script type="text/javascript" src="<?= $this->url->get('js/bootstrap.bundle.min.js') ?>"></script>
+	<title>YYPKF - Profil</title>
+</head>
+<body>
+	<header id="page-header">
+<!-- Header Content -->
+<div class="content-header">
+    <!-- Left Section -->
+    <div class="content-header-section">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a href="<?= $this->url->get('beranda') ?>" class="nav-link active">
+                <i class="fa fa-fw fa-home mr-5"></i>Beranda
+                </a>
+            </li>
+            <li class="nav-item">
+                <img src="img/logo.png" class="img-responsive" style="width: 50%; height: 80%">
+            </li>
+        </ul>
+    </div>
+    <!-- END Left Section -->
+
+    <!-- Right Section -->
+    <div class="content-header-section">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a href="<?= $this->url->get('profil') ?>" class="nav-link">Profil</a>
+            </li>
+            <li class="nav-item">
+                <a href="<?= $this->url->get('anak') ?>" class="nav-link">Data Anak</a>
+            </li>
+            <li class="nav-item">
+                <a href="<?= $this->url->get('kegiatan') ?>" class="nav-link">Berita</a>
+            </li>
+            <li class="nav-item">
+                <a href="<?= $this->url->get('kontak') ?>" class="nav-link">Kontak</a>
+            </li>
+            <li class="nav-item">
+                <a href="<?= $this->url->get('donasi') ?>" class="nav-link">Donasi</a>
+            </li>
+        </ul>
+    </div>
+    <!-- END Right Section -->
+</div>
+<!-- END Header Content -->
+</header>
+
+	
+	    <div id="page-container" class="sidebar-inverse side-scroll page-header-fixed main-content-boxed">
+            <main id="main-container">
+                <div class="content">
+                    <div class="row">
+                        <div id="demo" class="carousel slide" data-ride="carousel" data-interval="false" data-pause="hover">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                <img class="img img-fluid" src="<?= $this->url->get('img/bg2.jpg') ?>" alt="Pendiri">
+                                <div class="transpa carousel-caption bg-dark">
+                                    <h3>YAYASAN KUN FAYAKUN</h3>
+                                    <p>Profil Yayasan Yatim Piatu Kun Fayakun - Surabaya</p>
+                                </div>   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <center><h2 class="content-heading">MUKADIMAH</h2></center>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img class="img-fluid options-item" src="img/profil.jpg" alt="">
+                        </div>
+                        <div class="col-md-8">
+                        <h4 class="block-content font-w700">ASSALAMUALAIKUM WR WB</h4>
+                        <p class="block-content nice-copy text-justify">
+                        Tiada kata yang lebih pantas untuk kita ucapkan selain memanjatkan puji dan syukur kehadirat Allah SWT yang telah melimpahkan kepada kita segala rohmat, taufiq, dan hidayahnya. Sehingga kita masih dapat menikmati anugrah terindahnya yang ada dimuka bumi ini.
+                        </p>
+                        <p class="block-content nice-copy text-justify">
+                        Solawat serta salam mudah-mudahan tetap tercurahkan kepada junjungan Nabi besar kita Muhammad SAW yang telah menunjukkan kita dari jalan yang gelap gulita menuju jalan yang terang benderang.
+                        </p>
+                        <p class="block-content nice-copy text-justify">
+                        Selanjutnya saya sampaikan terima kasih yang sebesar-besarnya atas dukungan juga kepercayaan bapak/ibu juga saudara-saudara yang telah memberikan kesempatan kepada kami untuk mengemban tugas yang mungkin tidaklah ringan . Namun dengan dorongan dan motivasi yang telah ibu/bapak juga rekan-rekan berikan kepada saya. InsyaAlloh saya tidak akan menyia-nyiakan kesempatan yang telah ibu/bapak berikan kepada saya ini.
+                        </p>
+                        </div>
+                    </div>
+                    <center><h2 class="content-heading">PROFIL</h2></center>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img class="img-fluid options-item" src="img/logo.png" alt="">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="block-content">
+                                <table class="table table-borderless table-vcenter">
+                                    <tr>
+                                        <td >Nama</td>
+                                        <td >Yayasan Panti Asuhan Kun Fayakun</td>
+                                    </tr>
+                                    <tr>
+                                        <td >Tanggal Berdiri</td>
+                                        <td >12 Agustus 2015</td>
+                                    </tr>
+                                    <tr>
+                                        <td >Alamat</td>
+                                        <td >Jalan Raya Pandugo Timur kav 07-08, Surabaya, Wonorejo, Kec. Rungkut, Jawa Timur, 60297</td>
+                                    </tr>
+                                    <tr>
+                                        <td >Nomor HP</td>
+                                        <td >081-3333-13-999 atau 085-1029-13-999</td>
+                                    </tr>
+                                    <tr>
+                                        <td >Telepon</td>
+                                        <td >(031)8720331</td>
+                                    </tr>
+                                    <tr>
+                                        <td >Notaris</td>
+                                        <td >Wibowo Ibo Sarwono, SH</td>
+                                    </tr>
+                                    <tr>
+                                        <td >NPWP</td>
+                                        <td >73.716.382.4-615.000</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+	<br>
+	<br>
+	<div class="menuFooter clearfix">
+		<div class="container">
+			<div class="row clearfix">
+				<div class="col">
+					<h5>YAYASAN</h5>
+					<ul class="menuLink clearfix">
+						<li>
+							<a href="<?= $this->url->get('profil') ?>" title="PROFIL"><span>PROFIL</span></a>
+						</li>
+					</ul>
+				</div>
+				<div class="col borderLeft clearfix">
+					<h5>DONATUR</h5>
+					<ul class="menuLink clearfix">
+						<li>
+							<a href="<?= $this->url->get('donasi') ?>" title="PANDUAN DONATUR"><span>PANDUAN DONATUR</span></a>
+						</li>
+						<li>
+							<a href="<?= $this->url->get('donasi') ?>" title="CARA DONASI"><span>CARA DONASI</span></a>
+						</li>
+					</ul>
+				</div> 
+				<div class="col borderLeft clearfix">
+					<div class="footer-address"> 
+						<h5>KONTAK KAMI :</h5>
+						<address>
+							<i class="fa fa-map-marker"></i>
+							Jl.Raya Pandugo Timur No. 7-8 Rungkut - Surabaya 
+						</address> 
+						<h5><i class="fa fa-phone"></i> 031 8720331</h5>
+						<h5><i class="fa fa-mobile"></i> 085102913999</h5>
+					</div>
+				</div> 
+			</div> 
+		</div>
+	</div>
+	<br>
+	<div class="bg-info clearfix"> 
+		<div class="row"> 
+			<p>© 2019 PBKK - Crafted with <i class="fa fa-heart text-pulse"></i> by Maya</p>
+		</div> 
+	</div>
+</body>
+</html>
