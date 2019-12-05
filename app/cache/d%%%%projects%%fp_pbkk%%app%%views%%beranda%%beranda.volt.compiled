@@ -208,10 +208,10 @@
 					<h5>DONATUR</h5>
 					<ul class="menuLink clearfix">
 						<li>
-							<a href="<?= $this->url->get('donasi') ?>" title="PANDUAN DONATUR"><span>PANDUAN DONATUR</span></a>
+							<a href="<?= $this->url->get('donasi') ?>" title="PANDUAN DONASI"><span>PANDUAN DONASI</span></a>
 						</li>
 						<li>
-							<a href="<?= $this->url->get('donasi') ?>" title="CARA DONASI"><span>CARA DONASI</span></a>
+							<a href="<?= $this->url->get('dataDonasi') ?>" title="DATA DONASI"><span>DATA DONASI</span></a>
 						</li>
 					</ul>
 				</div> 

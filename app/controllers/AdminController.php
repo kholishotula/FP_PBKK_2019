@@ -15,6 +15,12 @@ class AdminController extends Controller
 		$anak = Anak::find();
 		$this->view->dataAnak = $anak;
 	}
+
+	public function editDonasiAction()
+	{
+		$donasi = Donasi::find();
+		$this->view->dataDonasi = $donasi;
+	}
 };
 
 ?>

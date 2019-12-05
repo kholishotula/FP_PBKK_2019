@@ -17,6 +17,13 @@ class AdminRoutes extends RouterGroup
 			[
 				'action' => 'editAnak',
 			]
+		);
+		
+		$this->addGet(
+			'/editDonasi',
+			[
+				'action' => 'editDonasi',
+			]
         );
 	}
 }
