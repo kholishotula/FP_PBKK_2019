@@ -3,10 +3,6 @@ namespace App\Validation;
 
 use Phalcon\Validation;
 use Phalcon\Validation\Validator\PresenceOf;
-use Phalcon\Validation\Validator\Regex;
-use Phalcon\Validation\Validator\StringLength;
-use Phalcon\Validation\Validator\Email;
-use Phalcon\Validation\Validator\Confirmation;
 
 class PenggunaValidation extends Validation
 {
@@ -61,8 +57,7 @@ class PenggunaValidation extends Validation
         'pw2',
         new Confirmation(
             [
-                "message" => "Password doesn't match confirmation",
-                "with"    => "pw",
+                //ini apa
             ]
         )
     );

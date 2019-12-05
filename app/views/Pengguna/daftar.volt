@@ -3,6 +3,12 @@
 {% block title %}YYPKF - Daftar{% endblock %}
 
 {% block content %}
+{% if session.has('donatur') %}
+    <script type="text/javascript">
+        alert('Anda telah log in');
+        document.location.href="{{ url("beranda") }}";
+    </script>
+{% endif %}
         <div id="page-container" class="sidebar-inverse side-scroll page-header-fixed main-content-boxed">
             <main id="main-container">
                 <div class="content">

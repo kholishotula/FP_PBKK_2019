@@ -3,6 +3,12 @@
 {% block title %}YYPKF - Masuk{% endblock %}
 
 {% block content %}
+{% if session.has('donatur') %}
+    <script type="text/javascript">
+        alert('Anda telah log in');
+        document.location.href="{{ url("beranda") }}";
+    </script>
+{% endif %}
         <div id="page-container" class="sidebar-inverse side-scroll page-header-fixed main-content-boxed">
             <main id="main-container">
                 <div class="content">
@@ -23,7 +29,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-alt-primary btn-info" data-toggle="modal" data-target="#modal-fadein">Submit</button>
+                                    <button type="submit" class="btn btn-success text-black" data-toggle="modal" data-target="#modal-fadein">Submit</button>
                                 </div>
                             </form>
                         </div>

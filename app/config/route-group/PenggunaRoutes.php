@@ -38,6 +38,13 @@ class PenggunaRoutes extends RouterGroup
 			[
 				'action' => 'cekMasuk',
 			]
+		);
+		
+		$this->addGet(
+			'/keluar',
+			[
+				'action' => 'keluar',
+			]
         );
 	}
 }

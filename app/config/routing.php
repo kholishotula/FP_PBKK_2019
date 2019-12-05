@@ -29,6 +29,14 @@ $di->set(
 			new PenggunaRoutes()
 		);
 
+		$router->mount(
+			new AnakRoutes()
+		);
+
+		$router->mount(
+			new AdminRoutes()
+		);
+
 		$router->addGet(
 			'/',
 			[

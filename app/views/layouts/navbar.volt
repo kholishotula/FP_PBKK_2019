@@ -35,9 +35,22 @@
             <li class="nav-item">
                 <a href="{{url('donasi')}}" class="nav-link">Donasi</a>
             </li>
-            <li>
-                <a href="{{url('masuk')}}" class="btn btn-success text-black">Masuk</a>
-            </li>
+            {% if session.has('admin') %}
+                <li class="btn btn-success dropdown">
+                    <a class="btn-btn-success dropdown-toggle text-black" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Admin</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{url('editAnak')}}">Atur Data Anak</a>
+                        <a class="dropdown-item" href="{{url('editDonasi')}}">Atur Data Donasi</a>
+                        <a class="dropdown-item" href="{{url('keluar')}}">Keluar</a>
+                    </div>
+                </li>
+            {% else %}
+                {% if session.has('donatur') %}
+                    <li><a href="{{url('keluar')}}" class="btn btn-success text-black">Keluar</a></li>
+                {% else %}
+                    <li><a href="{{url('masuk')}}" class="btn btn-success text-black">Masuk</a></li>
+                {% endif %}
+            {% endif %}
         </ul>
     </div>
     <!-- END Right Section -->

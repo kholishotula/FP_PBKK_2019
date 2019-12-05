@@ -11,7 +11,7 @@
 <script type="text/javascript" src="<?= $this->url->get('js/jquery-3.3.1.min.js') ?>"></script>
 <script type="text/javascript" src="<?= $this->url->get('js/script.js') ?>"></script>
 <script type="text/javascript" src="<?= $this->url->get('js/bootstrap.bundle.min.js') ?>"></script>
-	<title>YYPKF - Profil</title>
+	<title>YYPKF - Atur Data Anak Panti</title>
 </head>
 <body>
 	<header id="page-header">
@@ -75,79 +75,42 @@
 </header>
 
 	
-	    <div id="page-container" class="sidebar-inverse side-scroll page-header-fixed main-content-boxed">
+<?php if ($this->session->has('admin')) { ?>
+	
+<?php } else { ?>
+    <script type="text/javascript">
+        alert('Anda bukan Admin, Anda tidak berhak akses');
+        document.location.href="<?= $this->url->get('beranda') ?>";
+    </script>
+<?php } ?>
+<?php $tahun = time(); ?>
+        <div id="page-container" class="sidebar-inverse side-scroll page-header-fixed main-content-boxed">
             <main id="main-container">
                 <div class="content">
+                    <center><h2 class="content-heading">DATA ANAK PANTI</h2></center>
                     <div class="row">
-                        <div id="demo" class="carousel slide" data-ride="carousel" data-interval="false" data-pause="hover">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                <img class="img img-fluid" src="<?= $this->url->get('img/bg2.jpg') ?>" alt="Pendiri">
-                                <div class="transpa carousel-caption bg-dark">
-                                    <h3>YAYASAN KUN FAYAKUN</h3>
-                                    <p>Profil Yayasan Yatim Piatu Kun Fayakun - Surabaya</p>
-                                </div>   
+                        <?php foreach ($dataAnak as $anak) { ?>
+                            <div class="col-4 float-left">
+                                <div class="card text-center">
+                                    <img src="<?= $anak->_fotoAnak() ?>">
+                                    <h4><?= $anak->_namaLengkap() ?></h4>
+                                    <p>Nama Panggilan : <?= $anak->_nama() ?></p>
+                                    <p>Usia : <?= $anak->_usia() ?> tahun</p>
+                                    <p>Jenis Kelamin : <?= $anak->_jenisKelamin() ?></p>
+                                    <p>Kondisi Wali : <?= $anak->_wali() ?></p>
+                                    <center>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-secondary" data-toggle="tooltip" title="Edit">
+                                                <i class="fa fa-pencil">Edit</i>
+                                            </button>
+                                            <button type="button" class="btn btn-sm btn-secondary" data-toggle="tooltip" title="Delete">
+                                                <i class="fa fa-times">Hapus</i>
+                                            </button>
+                                        </div>
+                                    </center>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <center><h2 class="content-heading">MUKADIMAH</h2></center>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img class="img-fluid options-item" src="img/profil.jpg" alt="">
-                        </div>
-                        <div class="col-md-8">
-                        <h4 class="block-content font-w700">ASSALAMUALAIKUM WR WB</h4>
-                        <p class="block-content nice-copy text-justify">
-                        Tiada kata yang lebih pantas untuk kita ucapkan selain memanjatkan puji dan syukur kehadirat Allah SWT yang telah melimpahkan kepada kita segala rohmat, taufiq, dan hidayahnya. Sehingga kita masih dapat menikmati anugrah terindahnya yang ada dimuka bumi ini.
-                        </p>
-                        <p class="block-content nice-copy text-justify">
-                        Solawat serta salam mudah-mudahan tetap tercurahkan kepada junjungan Nabi besar kita Muhammad SAW yang telah menunjukkan kita dari jalan yang gelap gulita menuju jalan yang terang benderang.
-                        </p>
-                        <p class="block-content nice-copy text-justify">
-                        Selanjutnya saya sampaikan terima kasih yang sebesar-besarnya atas dukungan juga kepercayaan bapak/ibu juga saudara-saudara yang telah memberikan kesempatan kepada kami untuk mengemban tugas yang mungkin tidaklah ringan . Namun dengan dorongan dan motivasi yang telah ibu/bapak juga rekan-rekan berikan kepada saya. InsyaAlloh saya tidak akan menyia-nyiakan kesempatan yang telah ibu/bapak berikan kepada saya ini.
-                        </p>
-                        </div>
-                    </div>
-                    <center><h2 class="content-heading">PROFIL</h2></center>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img class="img-fluid options-item" src="img/logo.png" alt="">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="block-content">
-                                <table class="table table-borderless table-vcenter">
-                                    <tr>
-                                        <td >Nama</td>
-                                        <td >Yayasan Panti Asuhan Kun Fayakun</td>
-                                    </tr>
-                                    <tr>
-                                        <td >Tanggal Berdiri</td>
-                                        <td >12 Agustus 2015</td>
-                                    </tr>
-                                    <tr>
-                                        <td >Alamat</td>
-                                        <td >Jalan Raya Pandugo Timur kav 07-08, Surabaya, Wonorejo, Kec. Rungkut, Jawa Timur, 60297</td>
-                                    </tr>
-                                    <tr>
-                                        <td >Nomor HP</td>
-                                        <td >081-3333-13-999 atau 085-1029-13-999</td>
-                                    </tr>
-                                    <tr>
-                                        <td >Telepon</td>
-                                        <td >(031)8720331</td>
-                                    </tr>
-                                    <tr>
-                                        <td >Notaris</td>
-                                        <td >Wibowo Ibo Sarwono, SH</td>
-                                    </tr>
-                                    <tr>
-                                        <td >NPWP</td>
-                                        <td >73.716.382.4-615.000</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
             </main>

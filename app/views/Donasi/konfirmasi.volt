@@ -3,6 +3,14 @@
 {% block title %}YYPKF - Konfirmasi Donasi{% endblock %}
 
 {% block content %}
+{% if session.has('donatur') %}
+	
+{% else %}
+    <script type="text/javascript">
+        alert('Silahkan log in terlebih dahulu');
+        document.location.href="{{ url("masuk") }}";
+    </script>
+{% endif %}
         <div id="page-container" class="sidebar-inverse side-scroll page-header-fixed main-content-boxed">
             <main id="main-container">
                 <div class="content">
