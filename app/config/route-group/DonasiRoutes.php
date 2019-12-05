@@ -29,9 +29,16 @@ class DonasiRoutes extends RouterGroup
 		$this->addPost(
 			'/konfirmasi',
 			[
-				'action' => 'konfirm',
+				'action' => 'konfirmasiDonasi',
 			]
-        );
+		);
+		
+		$this->addGet(
+			'/dataDonasi',
+			[
+				'action' => 'dataDonasi',
+			]
+		);
 	}
 }
 

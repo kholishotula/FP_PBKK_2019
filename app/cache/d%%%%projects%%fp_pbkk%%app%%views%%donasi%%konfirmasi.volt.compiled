@@ -88,7 +88,7 @@
                 <div class="content">
                     <center><h2 class="content-heading">KONFIRMASI DONASI</h2></center>
                     <div class="col-xl-6">
-                        <form action="<?= $this->url->get('konfirmasi') ?>" method="post">
+                        <form action="<?= $this->url->get('konfirmasi') ?>" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <div class="form-material">
                                     <input type="text" class="form-control" name="nama" placeholder="Nama anda (jika berkenan mencantumkan nama)">
@@ -126,10 +126,9 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <strong><p>Bukti Donasi</p></strong>
                                 <div class="form-material">
-                                    <input type="file" class="custom-file-input" name="bukti">
-                                    <label class="custom-file-label">Pilih file</label>
+                                    <input type="file" name="buktiDonasi">
+                                    <label for="buktiDonasi">Bukti Donasi</label>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -180,10 +179,10 @@
 					<h5>DONATUR</h5>
 					<ul class="menuLink clearfix">
 						<li>
-							<a href="<?= $this->url->get('donasi') ?>" title="PANDUAN DONATUR"><span>PANDUAN DONATUR</span></a>
+							<a href="<?= $this->url->get('donasi') ?>" title="PANDUAN DONASI"><span>PANDUAN DONASI</span></a>
 						</li>
 						<li>
-							<a href="<?= $this->url->get('donasi') ?>" title="CARA DONASI"><span>CARA DONASI</span></a>
+							<a href="<?= $this->url->get('donasi') ?>" title="DATA DONASI"><span>DATA DONASI</span></a>
 						</li>
 					</ul>
 				</div> 

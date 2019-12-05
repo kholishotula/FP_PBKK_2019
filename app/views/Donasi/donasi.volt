@@ -30,7 +30,7 @@
                     <div>
                         <center><h2 class="content-heading">DATA DONASI</h2></center>
                         <p>Alhamdulillah, telah terkumpul dana sebesar Rp pada tahun {{ date("Y", tahun) }} <br>
-                        <a href="{{url('data-donasi')}}">Klik disini untuk mengetahui data donasi Yayasan Kun Fayakun</p></a>
+                        <a href="{{url('dataDonasi')}}">Klik disini untuk mengetahui data donasi Yayasan Kun Fayakun</p></a>
                     </div>
                     <br>
                     <blockquote class="blockquote text-center bg-info text-black">

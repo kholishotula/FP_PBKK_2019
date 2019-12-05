@@ -3,79 +3,61 @@ namespace App\Validation;
 
 use Phalcon\Validation;
 use Phalcon\Validation\Validator\PresenceOf;
+use Phalcon\Validation\Validator\Regex;
 
-class PenggunaValidation extends Validation
+class DonasiValidation extends Validation
 {
     public function initialize(){
 
     $this->add(
-        'username',
+        'telepon',
         new PresenceOf(
             [
-                'message' => 'The username is required',
+                'message' => 'The telephone is required',
             ]
         )
     );
 
     $this->add(
-        'username',
-        new StringLength([
-            'max' => 20,
-            'min' => 5
+        'telepon',
+        new Regex([
+            'pattern' => '/[0-9]{9,13}/',
+            'message' => 'The telephone is not valid',
         ])
     );
 
     $this->add(
-        'pw',
+        'bank',
         new PresenceOf(
             [
-                'message' => 'The password is required',
+                'message' => 'The bank is required',
             ]
         )
     );
 
     $this->add(
-        'pw',
-        new Regex(
-            [
-                'pattern' => '/[^_\n\r\s]{8,}/',
-                'message' => 'Password must contains at least 8 character',
-            ]
-        )
-    );
-
-    $this->add(
-        'pw2',
+        'rek',
         new PresenceOf(
             [
-                'message' => 'The confirmation password is required',
+                'message' => 'The account number is required',
             ]
         )
     );
 
     $this->add(
-        'pw2',
-        new Confirmation(
-            [
-                //ini apa
-            ]
-        )
-    );
-
-    $this->add(
-        'email',
+        'jumlah',
         new PresenceOf(
             [
-                'message' => 'The email is required',
+                'message' => 'The amount of donation is required',
             ]
         )
     );
 
     $this->add(
-        'email',
-        new Email(
+        'tanggal',
+        new PresenceOf(
             [
-                'message' => 'Email must follow email format',
+                'message' => 'The donation date is required',
             ]
         )
     );

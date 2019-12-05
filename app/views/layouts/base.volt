@@ -25,10 +25,10 @@
 					<h5>DONATUR</h5>
 					<ul class="menuLink clearfix">
 						<li>
-							<a href="{{url('donasi')}}" title="PANDUAN DONATUR"><span>PANDUAN DONATUR</span></a>
+							<a href="{{url('donasi')}}" title="PANDUAN DONASI"><span>PANDUAN DONASI</span></a>
 						</li>
 						<li>
-							<a href="{{url('donasi')}}" title="CARA DONASI"><span>CARA DONASI</span></a>
+							<a href="{{url('dataDonasi')}}" title="DATA DONASI"><span>DATA DONASI</span></a>
 						</li>
 					</ul>
 				</div> 

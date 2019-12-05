@@ -16,7 +16,7 @@
                 <div class="content">
                     <center><h2 class="content-heading">KONFIRMASI DONASI</h2></center>
                     <div class="col-xl-6">
-                        <form action="{{url('konfirmasi')}}" method="post">
+                        <form action="{{url('konfirmasi')}}" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <div class="form-material">
                                     <input type="text" class="form-control" name="nama" placeholder="Nama anda (jika berkenan mencantumkan nama)">
@@ -54,10 +54,9 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <strong><p>Bukti Donasi</p></strong>
                                 <div class="form-material">
-                                    <input type="file" class="custom-file-input" name="bukti">
-                                    <label class="custom-file-label">Pilih file</label>
+                                    <input type="file" name="buktiDonasi">
+                                    <label for="buktiDonasi">Bukti Donasi</label>
                                 </div>
                             </div>
                             <div class="form-group">

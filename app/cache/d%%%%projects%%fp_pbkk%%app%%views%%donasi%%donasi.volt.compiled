@@ -102,7 +102,7 @@
                     <div>
                         <center><h2 class="content-heading">DATA DONASI</h2></center>
                         <p>Alhamdulillah, telah terkumpul dana sebesar Rp pada tahun <?= date('Y', $tahun) ?> <br>
-                        <a href="<?= $this->url->get('data-donasi') ?>">Klik disini untuk mengetahui data donasi Yayasan Kun Fayakun</p></a>
+                        <a href="<?= $this->url->get('dataDonasi') ?>">Klik disini untuk mengetahui data donasi Yayasan Kun Fayakun</p></a>
                     </div>
                     <br>
                     <blockquote class="blockquote text-center bg-info text-black">
@@ -132,10 +132,10 @@
 					<h5>DONATUR</h5>
 					<ul class="menuLink clearfix">
 						<li>
-							<a href="<?= $this->url->get('donasi') ?>" title="PANDUAN DONATUR"><span>PANDUAN DONATUR</span></a>
+							<a href="<?= $this->url->get('donasi') ?>" title="PANDUAN DONASI"><span>PANDUAN DONASI</span></a>
 						</li>
 						<li>
-							<a href="<?= $this->url->get('donasi') ?>" title="CARA DONASI"><span>CARA DONASI</span></a>
+							<a href="<?= $this->url->get('dataDonasi') ?>" title="DATA DONASI"><span>DATA DONASI</span></a>
 						</li>
 					</ul>
 				</div> 
