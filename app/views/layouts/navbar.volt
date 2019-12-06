@@ -41,6 +41,7 @@
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="{{url('editAnak')}}">Kelola Data Anak</a>
                         <a class="dropdown-item" href="{{url('editDonasi')}}">Kelola Data Donasi</a>
+                        <a class="dropdown-item" href="{{url('editKegiatan')}}">Kelola Data Kegiatan</a>
                         <a class="dropdown-item" href="{{url('lihatDonatur')}}">Data Donatur</a>
                         <a class="dropdown-item" href="{{url('keluar')}}">Keluar</a>
                     </div>

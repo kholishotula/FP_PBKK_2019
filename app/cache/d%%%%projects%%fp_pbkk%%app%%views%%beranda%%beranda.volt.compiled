@@ -58,6 +58,7 @@
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="<?= $this->url->get('editAnak') ?>">Kelola Data Anak</a>
                         <a class="dropdown-item" href="<?= $this->url->get('editDonasi') ?>">Kelola Data Donasi</a>
+                        <a class="dropdown-item" href="<?= $this->url->get('editKegiatan') ?>">Kelola Data Kegiatan</a>
                         <a class="dropdown-item" href="<?= $this->url->get('lihatDonatur') ?>">Data Donatur</a>
                         <a class="dropdown-item" href="<?= $this->url->get('keluar') ?>">Keluar</a>
                     </div>

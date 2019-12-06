@@ -69,6 +69,20 @@ class AdminRoutes extends RouterGroup
 		);
 
 		$this->addGet(
+			'/editKegiatan',
+			[
+				'action' => 'editKegiatan',
+			]
+		);
+
+		$this->addPost(
+			'/tambahKegiatan',
+			[
+				'action' => 'tambahKegiatan',
+			]
+		);
+
+		$this->addGet(
 			'/lihatDonatur',
 			[
 				'action' => 'lihatDonatur',

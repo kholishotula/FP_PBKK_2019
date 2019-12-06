@@ -188,6 +188,36 @@ class AdminController extends Controller
 		}
 	}
 
+	public function editKegiatanAction()
+	{
+		$kegiatan = Kegiatan::find();
+		$this->view->dataKegiatan = $kegiatan;
+	}
+
+	public function tambahKegiatanAction()
+	{
+		foreach ($this->request->getUploadedFiles() as $file)
+		{
+			$filename = $_FILES['fotoKeg']['name'];
+			$target_dir = "img/";
+			$target_file = $target_dir . $filename;
+			$file->moveTo($target_file);
+			
+			$nama = $this->request->getPost('nama');
+			$deskripsi = $this->request->getPost('deskripsi');
+			
+			$kegiatanBaru = new Kegiatan();
+			$kegiatanBaru->construct($nama, $deskripsi, $target_file);
+			if ($kegiatanBaru->save() == false)
+			{
+				$this->response->redirect("editKegiatan");
+			}
+			else {
+				$this->response->redirect("editKegiatan");
+			}
+		}
+	}
+
 	public function lihatDonaturAction()
 	{
 		$id = $this->session->get('admin')['id'];

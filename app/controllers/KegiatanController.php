@@ -7,7 +7,8 @@ class KegiatanController extends Controller
 {
 	public function kegiatanAction()
 	{
-		
+		$kegiatan = Kegiatan::find();
+		$this->view->dataKegiatan = $kegiatan;
 	}
 };
 
