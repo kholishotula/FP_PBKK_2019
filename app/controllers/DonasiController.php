@@ -11,7 +11,12 @@ class DonasiController extends Controller
 {
 	public function donasiAction()
 	{
-		
+		$total = Donasi::sum(
+      [
+        'column' => 'jumlah'
+      ]
+    );
+    $this->view->totalDonasi = $total;
   }
     
   public function konfirmasiAction()
@@ -21,7 +26,7 @@ class DonasiController extends Controller
     
   public function konfirmasiDonasiAction()
 	{
-		$nama = $this->request->getPost('name');
+		$nama = $this->request->getPost('nama');
     $telepon = $this->request->getPost('telepon');
     $bank = $this->request->getPost('bank');
     $rek = $this->request->getPost('rek');
@@ -50,6 +55,10 @@ class DonasiController extends Controller
       }
       else {
         $donasi = new Donasi();
+        if($nama == NULL)
+        {
+          $nama = "Hamba Allah";
+        }
         $donasi->construct($nama, $telepon, $bank, $rek, $jumlah, $tanggal, $file);
 
         if($donasi->save()) {

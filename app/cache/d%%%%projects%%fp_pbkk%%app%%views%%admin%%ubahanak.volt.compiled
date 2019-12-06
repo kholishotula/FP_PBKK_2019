@@ -12,7 +12,7 @@
 <script type="text/javascript" src="<?= $this->url->get('js/jquery-3.3.1.min.js') ?>"></script>
 <script type="text/javascript" src="<?= $this->url->get('js/script.js') ?>"></script>
 <script type="text/javascript" src="<?= $this->url->get('js/bootstrap.bundle.min.js') ?>"></script>
-	<title>YYPKF - Konfirmasi Donasi</title>
+	<title>YYPKF - Atur Data Anak Panti</title>
 </head>
 <body>
 	<header id="page-header">
@@ -56,8 +56,9 @@
                 <li class="btn btn-success dropdown">
                     <a class="btn-btn-success dropdown-toggle text-black" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Admin</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="<?= $this->url->get('editAnak') ?>">Atur Data Anak</a>
-                        <a class="dropdown-item" href="<?= $this->url->get('editDonasi') ?>">Atur Data Donasi</a>
+                        <a class="dropdown-item" href="<?= $this->url->get('editAnak') ?>">Kelola Data Anak</a>
+                        <a class="dropdown-item" href="<?= $this->url->get('editDonasi') ?>">Kelola Data Donasi</a>
+                        <a class="dropdown-item" href="<?= $this->url->get('lihatDonatur') ?>">Data Donatur</a>
                         <a class="dropdown-item" href="<?= $this->url->get('keluar') ?>">Keluar</a>
                     </div>
                 </li>
@@ -76,92 +77,64 @@
 </header>
 
 	
-<?php if ($this->session->has('donatur')) { ?>
+<?php if ($this->session->has('admin')) { ?>
 	
 <?php } else { ?>
     <script type="text/javascript">
-        alert('Silahkan log in terlebih dahulu');
-        document.location.href="<?= $this->url->get('masuk') ?>";
+        alert('Anda bukan Admin, Anda tidak berhak akses');
+        document.location.href="<?= $this->url->get('beranda') ?>";
     </script>
 <?php } ?>
+<?php $value = 'ubahAnak/' . $anaknya->_id(); ?>
         <div id="page-container" class="sidebar-inverse side-scroll page-header-fixed main-content-boxed">
             <main id="main-container">
                 <div class="content">
-                    <center><h2 class="content-heading">KONFIRMASI DONASI</h2></center>
-                    <div class="col-xl-6">
-                        <form action="<?= $this->url->get('konfirmasi') ?>" method="post" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <div class="form-material">
-                                    <input type="text" class="form-control" name="nama" placeholder="Nama anda (jika berkenan mencantumkan nama)">
-                                    <label>Nama</label>
+                    <center><h2 class="content-heading">UBAH DATA ANAK PANTI</h2></center>
+                            <form action="<?= $this->url->get($value) ?>" method="post">
+                                <div class="form-group">
+                                    <div class="form-material">
+                                        <img src="<?= $anaknya->_fotoAnak() ?>">
+                                        <label for="foto">Foto Anak</label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-material">
-                                    <input type="number" class="form-control" name="telepon" placeholder="08XXXXXXXXX">
-                                    <label>Telepon atau HP</label>
+                                <div class="form-group">
+                                    <div class="form-material">
+                                        <input type="text" class="form-control" name="namaLengkap" value="<?= $anaknya->_namaLengkap() ?>">
+                                        <label>Nama Lengkap</label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-material">
-                                    <input type="text" class="form-control" name="bank" placeholder="Bank BCD">
-                                    <label>Bank Asal</label>
+                                <div class="form-group">
+                                    <div class="form-material">
+                                        <input type="text" class="form-control" name="nama" value="<?= $anaknya->_nama() ?>">
+                                        <label>Nama Panggilan</label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-material">
-                                    <input type="text" class="form-control" name="rek" placeholder="XXXXX-XXXX-XXXX">
-                                    <label>Nomor Rekening</label>
+                                <div class="form-group">
+                                    <div class="form-material">
+                                        <input type="number" class="form-control" name="usia" value="<?= $anaknya->_usia() ?>">
+                                        <label>Usia</label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-material">
-                                    <input type="number" class="form-control" name="jumlah" placeholder="XXXXX">
-                                    <label>Jumlah Donasi</label>
+                                <div class="form-group">
+                                    <div class="form-material">
+                                        <input type="text" class="form-control" name="jenis_kel" value="<?= $anaknya->_jenisKelamin() ?>">
+                                        <label>Jenis Kelamin</label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-material">
-                                    <input type="date" class="form-control" name="tanggal">
-                                    <label>Tanggal Donasi</label>
+                                <div class="form-group">
+                                    <div class="form-material">
+                                        <input type="text" class="form-control" name="wali" value="<?= $anaknya->_wali() ?>">
+                                        <label>Kondisi Wali</label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-material">
-                                    <input type="file" name="buktiDonasi">
-                                    <label for="buktiDonasi">Bukti Donasi</label>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-success text-black">Submit</button>
+                                    <a href="<?= $this->url->get('editAnak') ?>" class="btn btn-alt-secondary" data-dismiss="modal">Kembali</a>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-alt-primary btn-info" data-toggle="modal" data-target="#modal-fadein">Submit</button>
-                            </div>
-                        </form>
-                    </div>    
-                </div>
-            </main>
-        </div>
-        <div class="modal fade" id="modal-fadein" tabindex="-1" role="dialog" aria-labelledby="modal-fadein" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="block block-themed block-transparent mb-0">
-                        <div class="block-header bg-success">
-                            <h3 class="block-title">Terima kasih</h3>
-                            <div class="block-options">
-                                <button type="button" class="btn-block-option" data-dismiss="modal" aria-label="Close">
-                                    <i class="si si-close"></i>
-                                </button>
-                            </div>
+                            </form>
                         </div>
-                        <div class="block-content">
-                            <p>Terima kasih telah melakukan donasi :).</p>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="<?= $this->url->get('donasi') ?>" class="btn btn-alt-secondary" data-dismiss="modal">Kembali</a>
-                    </div>
+                    </main>
                 </div>
-            </div>
-        </div>
 
 	<br>
 	<br>

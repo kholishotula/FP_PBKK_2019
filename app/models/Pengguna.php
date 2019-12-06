@@ -27,6 +27,11 @@ class Pengguna extends Model
       return $this->username;
     }
 
+    public function _email()
+    {
+      return $this->email;
+    }
+
     public function _password()
     {
       return $this->password;

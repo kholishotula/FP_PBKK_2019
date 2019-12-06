@@ -1,36 +1,34 @@
 {% extends "layouts\base.volt" %}
 
-{% block title %}YYPKF - Data Donasi{% endblock %}
+{% block title %}YYPKF - Data Donatur{% endblock %}
 
 {% block content %}
-{% if session.has('donatur') %}
+{% if session.has('admin') %}
 	
 {% else %}
     <script type="text/javascript">
-        alert('Silahkan log in terlebih dahulu');
-        document.location.href="{{ url("masuk") }}";
+        alert('Anda bukan Admin, Anda tidak berhak akses');
+        document.location.href="{{ url("beranda") }}";
     </script>
 {% endif %}
         <div id="page-container" class="sidebar-inverse side-scroll page-header-fixed main-content-boxed">
             <main id="main-container">
                 <div class="content">
-                    <center><h2 class="content-heading">DATA DONASI</h2></center>
+                    <center><h2 class="content-heading">DATA DONATUR</h2></center>
                     <table class="table">
                         <thead class="thead-light">
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">Nama Donatur</th>
-                                <th scope="col">Jumlah</th>
-                                <th scope="col">Tanggal</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Email</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {% for donasi in dataDonasi %}
+                            {% for donatur in dataDonatur %}
                                 <tr>
-                                    <th scope="row">{{ donasi._id() }}</th>
-                                    <td>{{ donasi._nama() }}</td>
-                                    <td>{{ donasi._jumlah() }}</td>
-                                    <td>{{ donasi._tanggal() }}</td>
+                                    <th scope="row">{{ donatur._id() }}</th>
+                                    <td>{{ donatur._username() }}</td>
+                                    <td>{{ donatur._email() }}</td>
                                 </tr>
                             {% endfor %}
                         </tbody>

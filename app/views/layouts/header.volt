@@ -1,5 +1,6 @@
 <link href="{{ url("css/bootstrap.min.css") }}" rel="stylesheet">
 <link href="{{ url("css/fontawesome.min.css") }}" rel="stylesheet">
+<!--<link src="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
 <link id="css-theme" href="{{ url("css/pulse.min.css") }}" rel="stylesheet">
 <link id="css-main" href="{{ url("css/codebase.min.css") }}" rel="stylesheet">
 <!-- <link href="{{ url("css/style.css") }}" rel="stylesheet">

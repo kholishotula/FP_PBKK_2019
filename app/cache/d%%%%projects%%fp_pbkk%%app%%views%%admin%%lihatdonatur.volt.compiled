@@ -12,7 +12,7 @@
 <script type="text/javascript" src="<?= $this->url->get('js/jquery-3.3.1.min.js') ?>"></script>
 <script type="text/javascript" src="<?= $this->url->get('js/script.js') ?>"></script>
 <script type="text/javascript" src="<?= $this->url->get('js/bootstrap.bundle.min.js') ?>"></script>
-	<title>YYPKF - Konfirmasi Donasi</title>
+	<title>YYPKF - Data Donatur</title>
 </head>
 <body>
 	<header id="page-header">
@@ -76,91 +76,38 @@
 </header>
 
 	
-<?php if ($this->session->has('donatur')) { ?>
+<?php if ($this->session->has('admin')) { ?>
 	
 <?php } else { ?>
     <script type="text/javascript">
-        alert('Silahkan log in terlebih dahulu');
-        document.location.href="<?= $this->url->get('masuk') ?>";
+        alert('Anda bukan Admin, Anda tidak berhak akses');
+        document.location.href="<?= $this->url->get('beranda') ?>";
     </script>
 <?php } ?>
         <div id="page-container" class="sidebar-inverse side-scroll page-header-fixed main-content-boxed">
             <main id="main-container">
                 <div class="content">
-                    <center><h2 class="content-heading">KONFIRMASI DONASI</h2></center>
-                    <div class="col-xl-6">
-                        <form action="<?= $this->url->get('konfirmasi') ?>" method="post" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <div class="form-material">
-                                    <input type="text" class="form-control" name="nama" placeholder="Nama anda (jika berkenan mencantumkan nama)">
-                                    <label>Nama</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-material">
-                                    <input type="number" class="form-control" name="telepon" placeholder="08XXXXXXXXX">
-                                    <label>Telepon atau HP</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-material">
-                                    <input type="text" class="form-control" name="bank" placeholder="Bank BCD">
-                                    <label>Bank Asal</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-material">
-                                    <input type="text" class="form-control" name="rek" placeholder="XXXXX-XXXX-XXXX">
-                                    <label>Nomor Rekening</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-material">
-                                    <input type="number" class="form-control" name="jumlah" placeholder="XXXXX">
-                                    <label>Jumlah Donasi</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-material">
-                                    <input type="date" class="form-control" name="tanggal">
-                                    <label>Tanggal Donasi</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-material">
-                                    <input type="file" name="buktiDonasi">
-                                    <label for="buktiDonasi">Bukti Donasi</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-alt-primary btn-info" data-toggle="modal" data-target="#modal-fadein">Submit</button>
-                            </div>
-                        </form>
-                    </div>    
+                    <center><h2 class="content-heading">DATA DONATUR</h2></center>
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($dataDonatur as $donatur) { ?>
+                                <tr>
+                                    <th scope="row"><?= $donatur->_id() ?></th>
+                                    <td><?= $donatur->_username() ?></td>
+                                    <td><?= $donatur->_email() ?></td>
+                                </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
                 </div>
             </main>
-        </div>
-        <div class="modal fade" id="modal-fadein" tabindex="-1" role="dialog" aria-labelledby="modal-fadein" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="block block-themed block-transparent mb-0">
-                        <div class="block-header bg-success">
-                            <h3 class="block-title">Terima kasih</h3>
-                            <div class="block-options">
-                                <button type="button" class="btn-block-option" data-dismiss="modal" aria-label="Close">
-                                    <i class="si si-close"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="block-content">
-                            <p>Terima kasih telah melakukan donasi :).</p>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="<?= $this->url->get('donasi') ?>" class="btn btn-alt-secondary" data-dismiss="modal">Kembali</a>
-                    </div>
-                </div>
-            </div>
         </div>
 
 	<br>

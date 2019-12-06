@@ -1,8 +1,9 @@
-a:5:{i:0;s:927:"<!DOCTYPE html>
+a:5:{i:0;s:1040:"<!DOCTYPE html>
 <html>
 <head>
 	<link href="<?= $this->url->get('css/bootstrap.min.css') ?>" rel="stylesheet">
 <link href="<?= $this->url->get('css/fontawesome.min.css') ?>" rel="stylesheet">
+<!--<link src="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
 <link id="css-theme" href="<?= $this->url->get('css/pulse.min.css') ?>" rel="stylesheet">
 <link id="css-main" href="<?= $this->url->get('css/codebase.min.css') ?>" rel="stylesheet">
 <!-- <link href="<?= $this->url->get('css/style.css') ?>" rel="stylesheet">
@@ -11,7 +12,7 @@ a:5:{i:0;s:927:"<!DOCTYPE html>
 <script type="text/javascript" src="<?= $this->url->get('js/jquery-3.3.1.min.js') ?>"></script>
 <script type="text/javascript" src="<?= $this->url->get('js/script.js') ?>"></script>
 <script type="text/javascript" src="<?= $this->url->get('js/bootstrap.bundle.min.js') ?>"></script>
-	<title>";s:5:"title";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:1:" ";s:4:"file";s:47:"D:\Projects\FP_PBKK\app/views\layouts\base.volt";s:4:"line";i:5;}}i:1;s:2736:"</title>
+	<title>";s:5:"title";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:1:" ";s:4:"file";s:47:"D:\Projects\FP_PBKK\app/views\layouts\base.volt";s:4:"line";i:5;}}i:1;s:2853:"</title>
 </head>
 <body>
 	<header id="page-header">
@@ -55,8 +56,9 @@ a:5:{i:0;s:927:"<!DOCTYPE html>
                 <li class="btn btn-success dropdown">
                     <a class="btn-btn-success dropdown-toggle text-black" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Admin</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="<?= $this->url->get('editAnak') ?>">Atur Data Anak</a>
-                        <a class="dropdown-item" href="<?= $this->url->get('editDonasi') ?>">Atur Data Donasi</a>
+                        <a class="dropdown-item" href="<?= $this->url->get('editAnak') ?>">Kelola Data Anak</a>
+                        <a class="dropdown-item" href="<?= $this->url->get('editDonasi') ?>">Kelola Data Donasi</a>
+                        <a class="dropdown-item" href="<?= $this->url->get('lihatDonatur') ?>">Data Donatur</a>
                         <a class="dropdown-item" href="<?= $this->url->get('keluar') ?>">Keluar</a>
                     </div>
                 </li>
